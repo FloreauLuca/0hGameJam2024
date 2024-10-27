@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
         {
             _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _upForce);
             GetComponent<Animator>().SetTrigger("bounce");
+            GetComponent<AudioSource>().Play();
             UnityEngine.Debug.Log(_rigidbody.velocity);
         }
     }
