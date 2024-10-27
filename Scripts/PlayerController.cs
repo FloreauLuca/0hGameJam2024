@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Bounce"))
         {
             _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _upForce);
+            GetComponent<Animator>().SetTrigger("bounce");
             UnityEngine.Debug.Log(_rigidbody.velocity);
         }
     }
